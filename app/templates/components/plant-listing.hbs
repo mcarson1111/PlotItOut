@@ -1,0 +1,52 @@
+{{yield}}
+
+
+
+<div class="plant" {{action "toggleDetails"}}>
+  <!-- <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}"> -->
+  <!-- this will have the image of the plant -->
+</div>
+<br>
+<!-- the name of the plant which doubles as a link-to for info -->
+<!-- <div class="info">{{plant.name}}</div> -->
+
+
+<!-- {{#if isExpanded}}
+ <div id="myModal" class="modal">
+
+   <div class="modal-content">
+     <span class="close" {{action "toggleDetails"}}><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></span>
+     <h2>
+     {{plant.name}}
+     </h2>
+     <p>sunshine needs:{{plant.sunshine}}</p>
+     <p>companions: {{plant.companions}}</p>
+     etc.
+
+
+     THIS WILL BE A DRAG AND DROP...NOT AN ADD BUTTON BUT NOT SURE HOW TO PASS ACTIONS OFF TO A DRAG AND DROP
+     <div class="add">
+        this button has an action, and it is passing along plant bc the action takes an arguement ( this is to know which plant to add to the plot)
+        <a class="add-to-plot" {{action "addToPlot" movie}}><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span></a>
+        <p>Add to Plot</p>
+     </div>
+     <br>
+   </div>
+
+ </div>
+{{/if}}
+
+
+
+
+{{#if plantAdded}}
+<div id="myModal" class="modal">
+
+  <div class="modal-ok">
+    <p>Plant added to Plot/p>
+    <button type="button" class="btn btn-success" {{action "toggleDeets"}}>Cool.</button>
+    <br>
+  </div>
+
+</div>
+{{/if}}

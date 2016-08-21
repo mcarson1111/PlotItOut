@@ -1,0 +1,58 @@
+{{outlet}}
+
+<div class= "everything">
+
+  <!-- <div class="name"> -->
+    <!-- this will have the person's name who is creating the plot -->
+  <!-- </div> -->
+
+  <!-- <button class="buttonHome" {{action "home"}}> this is a picture of the home seed </button> -->
+  <!-- <button class="buttonInfo" {{action "info"}}> this is a picture of the info seed </button> -->
+  <!-- <button class="buttonHelp" {{action "help"}}> this is a picture of the help seed </button> -->
+
+
+  <!-- <div class= "plot"> -->
+    <!-- this will be the rendered plot based on the width and length info so....yeah....thats a thing -->
+  <!-- </div> -->
+
+  <form class="form" {{action "newPLot" on="submit"}}>
+    <div class="control-label">
+      <label>Soil type:</label>
+    </div>
+
+    <div class="controls">
+      {{input type="text" value=soil placeholder="soil"}}
+    </div>
+
+    <div class="control-label">
+      <label>Hardiness Zone:</label>
+    </div>
+
+    <div class="controls">
+      {{input type="text" value=zone placeholder="zone"}}
+    </div>
+
+    <button type="submit" class="btn">submit</button>
+  </form>
+
+
+
+
+
+
+
+  <!-- <table class= "plants">
+    <tbody>
+      {{#each plant as |plants|}}
+        <td>
+          {{plant-listing plant=plants addToPlot=(action 'addPlant')}}
+        </td>
+      {{/each}}
+    </tbody>
+  </table> -->
+
+
+
+
+
+</div>
