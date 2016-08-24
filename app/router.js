@@ -12,7 +12,10 @@ Router.map(function() {
   this.route('newplot');
   this.route('about');
   this.route('contact');
-  this.route('veggies');
+  this.route('veggies', { path: 'veggies/:soil/:zone'});
+  this.route('fruits');
+  this.route('herbs');
+  this.route('flowers');
 });
 
 export default Router;

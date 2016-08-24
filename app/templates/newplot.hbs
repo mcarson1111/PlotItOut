@@ -15,7 +15,8 @@
     <!-- this will be the rendered plot based on the width and length info so....yeah....thats a thing -->
   <!-- </div> -->
 
-  <form class="form" {{action "newPLot" on="submit"}}>
+  <form class="form" {{action "makePlot" soil zone width length on="submit"}}>
+
     <div class="control-label">
       <label>Soil type:</label>
     </div>
@@ -30,6 +31,22 @@
 
     <div class="controls">
       {{input type="text" value=zone placeholder="zone"}}
+    </div>
+
+    <div class="control-label">
+      <label>Plot width:</label>
+    </div>
+
+    <div class="controls">
+      {{input type="text" value=width placeholder="width"}}
+    </div>
+
+    <div class="control-label">
+      <label>Plot length:</label>
+    </div>
+
+    <div class="controls">
+      {{input type="text" value=length placeholder="length"}}
     </div>
 
     <button type="submit" class="btn">submit</button>

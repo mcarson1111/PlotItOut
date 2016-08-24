@@ -2,8 +2,9 @@ import DS from 'ember-data';
 import Ember from 'ember';
 
 export default DS.RESTAdapter.extend({
+
   query: function(store, type, query) {
-    var url = "http://localhost:3001/veggies";
+    var url = "http://localhost:3000/flowers";
     return new Ember.RSVP.Promise(function(resolve, reject) {
       Ember.$.getJSON(url, query).then(function(data) {
         console.dir(data)

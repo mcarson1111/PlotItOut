@@ -2,6 +2,20 @@
 
 <!-- {{input type="checkbox" name="isAdmin" checked=isAdmin}} -->
 
-<!-- <form class="checkbox" {{action "findVeggies" on="submit"}}> -->
+<!-- <form class="checkbox" {{action "findFruits" on="submit"}}> -->
 
-<!-- </form> -->
+<!-- </form> --> 
+ {{#each model as |veggy|}}
+  {{veggy.name}} <img src='/{{veggy.name}}.png' /><br>
+{{/each}}
+
+<!-- {{#multiselect-checkboxes options=users selection=selectedUsers as |user isSelected|}}
+  <li>
+    <label>
+      {{input type="checkbox" checked=isSelected}}
+      {{#each model as |veggy|}}
+        {{veggy.name}} <img src='/{{veggy.name}}.png' /><br>
+      {{/each}}
+    </label>
+  </li>
+{{/multiselect-checkboxes}} -->

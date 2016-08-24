@@ -2,6 +2,7 @@ import DS from 'ember-data';
 import Ember from 'ember';
 
 export default DS.RESTAdapter.extend({
+  
   query: function(store, type, query) {
     var url = "http://localhost:3001/newplot";
     return new Ember.RSVP.Promise(function(resolve, reject) {
