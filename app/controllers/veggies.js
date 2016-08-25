@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
 
   checkVeggies: false,
+  veggyArray: [],
 
   actions: {
     checkedVeggies: function( ) {
@@ -23,8 +24,8 @@ export default Ember.Controller.extend({
       }
 
       console.log(arrayVeggies)
-      
-      this.set('arrayVeggies');
+
+      this.set('veggyArray', arrayVeggies);
       this.transitionToRoute('plots');
     }
   }
