@@ -1,13 +1,46 @@
 {{outlet}}
 
-<!-- {{input type="checkbox" name="isAdmin" checked=isAdmin}} -->
 
-<!-- <form class="checkbox" {{action "findFruits" on="submit"}}> -->
-
-<!-- </form> --> 
- {{#each model as |veggy|}}
+<!-- </form> -->
+ <!-- {{#each model as |veggy|}}
   {{veggy.name}} <img src='/{{veggy.name}}.png' /><br>
-{{/each}}
+{{/each}} -->
+
+<form {{action "addVeggies" on="submit"}}>
+
+    <p>Selected veggies:
+      <ul>
+         {{#each model as |veggy|}}
+        <!-- <p>{{input type="checkbox" name="veggie.name" checked=selectedVeggies}}</p> if one box is checked, all are -->
+        <!-- {{input type='checkbox' name='{{veggy.name}}' checked=checkedVeggies}} if i check one boxes, all are checked -->
+        <!-- {{multiselect-checkboxes options=veggies labelProperty='veggy.name' selection=selectedVeggies}}  this does not render checkboxes at all, wth -->
+         <!-- {{input type="checkbox" name='veggy.name' action=checkVeggies on="click"}} -->
+       <!-- <input type="checkbox" value='{{veggy.id}}' checked={{checkVeggies}}/> -->
+       <!-- {{input type="checkbox" checked=foo}} -->
+       <!-- <input type="checkbox" value='{{veggy.id}}' onchange="checkVeggies()"/> -->
+
+       <input type="checkbox" value='{{veggy.name}}' class="veggie"/>
+
+          {{veggy.name}} <!--<img src='/{{veggy.name}}.png' />--><br>
+        {{/each}}
+      </ul>
+
+      <!-- {{#multiselect-checkboxes options=veggies selection=selectedVeggies as |veggy isSelected|}}
+      {{veggy}}
+        <li>
+          <label>
+            {{input type="checkbox" checked=isSelected}}
+            {{veggy.name}}
+          </label>
+        </li>
+      {{/multiselect-checkboxes}} -->
+
+      <button type="submit" class="btn">submit</button>
+    </p>
+</form>
+
+
+
 
 <!-- {{#multiselect-checkboxes options=users selection=selectedUsers as |user isSelected|}}
   <li>

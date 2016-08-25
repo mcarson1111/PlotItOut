@@ -13,9 +13,10 @@ Router.map(function() {
   this.route('about');
   this.route('contact');
   this.route('veggies', { path: 'veggies/:soil/:zone'});
-  this.route('fruits');
+  this.route('fruits'), { path: 'fruits/:veggies'};  // ?
   this.route('herbs');
   this.route('flowers');
+  this.route('plots');
 });
 
 export default Router;
