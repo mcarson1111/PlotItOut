@@ -13,7 +13,8 @@ Router.map(function() {
   this.route('about');
   this.route('contact');
   this.route('veggies', { path: 'veggies/:soil/:zone'});
-  this.route('fruits'), { path: 'fruits/:veggies'};  // ?
+  // this.route('veggies', { path: 'veggies/:veggy_id'});
+  this.route('fruits'),
   this.route('herbs');
   this.route('flowers');
   this.route('plots');

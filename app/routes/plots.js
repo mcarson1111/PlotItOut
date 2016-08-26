@@ -6,11 +6,17 @@ export default Ember.Route.extend({
     console.log(veggies)
     this.set('veggyArray', veggies)
 
-    for (var veggy of this.get('veggyArray')) {
+    // var selectedVeggies = [ ]
+    //
+    // for (var veggy of this.get('veggyArray')) {
   // query the store
   // this.store to find the veggie with the name like the veggy we're on
-
-    }
+  //   var foundVeggy = this.store.findRecord('veggy', veggy)
+  //   console.log(foundVeggy)
+  //
+  //   selectedVeggies.pushObject(foundVeggy)
+  //   }
+  //   console.log(selectedVeggies)
   },
 
   setupController: function (controller, model) {
